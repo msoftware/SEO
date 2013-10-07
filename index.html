@@ -5,10 +5,49 @@
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Seo : SEO Download Seite" />
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>Seo</title>
+    
+          <script type="text/javascript">
+ 
+    var JQFUNCS =
+    {
+        runFunc:
+        {
+            /* ------------------------------ jsonp Demo ------------------------------ */
+            "jsonp":
+            {
+                run: function(id)
+                {
+                    var demobox = $('#'+id);
+                    demobox.html('<img id="loading" src="/function-demos/images/loading.gif" />');
+                    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+                    {
+                      tags: "jquery",
+                      tagmode: "any",
+                      format: "json"
+                    },
+                    function(data) {
+                      demobox.empty();
+                      $.each(data.items, function(i,item){
+                        demobox.append('<a href="'+item.link+'" target="_blank"><img style="max-width:150px;" src="'+item.media.m+'" alt="'+item.title+'" title="'+item.title+'" />');
+                        if ( i == 10 ) return false;
+                      });
+                      $('#'+id+' #loading').hide();
+                    });
+                },
+ 
+                reset: function(id)
+                {
+                    $('#'+id).empty().hide();
+                }
+            }
+        }
+    }
+ 
+    </script>
   </head>
 
   <body>
@@ -33,6 +72,12 @@
       <section id="main_content" class="inner">
         <p>Meine SEO Download Seite</p>
       </section>
+
+ 
+<p class="example">Demo: AJAX & JSONP to load data from an external source.</p>
+<p>This demo will load the latest pictures tagged "jQuery" from Flickr Public Feed.</p>
+<p><a href="#" id="jsonp-demobtn" class="demobtn btn actionr">Run Demo</a> <a href="#" id="jsonp-codebtn" class="codebtn btn actionr">View Code</a> <a href="#" id="jsonp-resetbtn" class="resetbtn btn actionr" style="display: none;">Reset</a></p>
+<div class="demoarea" id="jsonp" style="display:inline-block"></div>
     </div>
 
     <!-- FOOTER  -->
