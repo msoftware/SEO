@@ -18,17 +18,11 @@
                     dataType: 'jsonp',
                     success: function (data) {
                         if (data.tag_wikis.length > 0) {
-                            alert(data.tag_wikis[0].wiki_excerpt);
+                            console.dir(data);
                      	}
                     },
                     jsonp: 'jsonp'
                 });
-                
-                $(document).ready(function () {
-    $.getJSON('http://api.stackoverflow.com/1.1/tags/ravendb/wikis?callback=?', null, function (results) {
-        console.dir(results);
-      });
-   });
  
     </script>
   </head>
