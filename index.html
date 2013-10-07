@@ -14,12 +14,8 @@
 $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
 {
   format: "json"
-},
-//RETURNED RESPONSE DATA IS LOOPED AND ONLY IMAGE IS APPENDED TO IMAGE DIV
-function(data) {
+}, function(data) {
   console.dir(data);
-
- });
 });</script>
   </head>
 
