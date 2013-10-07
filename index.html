@@ -14,7 +14,7 @@
  
                 $.ajax({
                     type: 'GET',
-                    url: 'http://www.google.de/uds/GwebSearch?context=0&lstkp=0&start=0&rsz=large&hl=de&gss=.de&sig=6520c5e1eff94d2f0b58de01c9739f48&key=notsupplied&v=1.0&q=seokanzler',
+                    url: 'http://www.google.de/uds/GwebSearch?context=0&lstkp=0&start=0&rsz=large&hl=de&gss=.de&sig=6520c5e1eff94d2f0b58de01c9739f48&key=notsupplied&v=1.0&q=seokanzler&callback=?',
                     dataType: 'jsonp',
                     success: function (data) {
                         if (data.tag_wikis.length > 0) {
