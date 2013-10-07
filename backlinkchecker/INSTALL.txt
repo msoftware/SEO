@@ -1,0 +1,64 @@
+################################################################################
+
+                       Backlinkchecker Installation
+
+################################################################################
+
+Download
+################################################################################
+Eine aktuelle Version des Backlinkcheckers findet man unter dem folgenden URL.
+
+Download URL: http://sourceforge.net/project/showfiles.php?group_id=251579
+
+
+Entpacken
+################################################################################
+Entpacken Sie das Zip-Archiv in einen beliebigen Ordner auf der Festplatte.
+
+Konfiguration
+################################################################################
+Tragen Sie die Konfiguration der MySQL Datenbank und die Konfiguration für den
+Cache in die Datei blc/config.php ein. Die Zugangsdaten für die MySQL Tabelle
+haben Sie von Ihrem Provider erhalten. Die Zeiten für den Cache können Sie 
+frei wählen. Eine Cache der eine sehr lange Gültigkeit hat, beschleunigt die
+Anwendung, zeigt aber nicht immer die aktuellen Ergebnisse, ein Cache der nur 
+eine sehr kurze Gültigkeit hat, sorgt dafür, dass die Anwendung sehr oft
+neue Daten von den Datenquellen abrufen muss und daher langsamer wird. 
+
+
+Upload
+################################################################################
+Laden Sie alle Dateien und Unterordner auf den Server. Dies ist z.B. per 
+FTP möglich. Ein sehr gutes Freeware Programm hierfür ist der Fireproxy.
+Fireproxy (http://fireproxy.mozdev.org/)
+
+
+Datenbank anlegen
+################################################################################
+Nachdem alle Dateien auf den Server kopiert wurden, muss die Datenbankstruktur
+erzeugt werden. Dazu wird das folgende Setup Skript ausgefüht.
+http://meinserver.de/meinverzeichnis/blc/setup.php
+Falls bei der Anlage der Tabellen Fehler auftreten, wird das im Browserfenster
+angezeigt!
+Wichtig: Nachdem die Datenbank angelegt wurde, sollte die Datei setup.php
+gelöscht werden. 
+
+
+Proxy (Optional)
+################################################################################
+Zum Abfragen des Pagerank bei Google kann es sinnvoll sein, einen Proxy zu 
+verwenden, um die eigene IP Adresse vor Google zu verbergen. Zu diesem Zweck ist 
+es möglich in der Tabelle 'proxys' bis zu 12 Proxys einzutragen. 
+Da zur Verwaltung der Proxys keine Oberfläche existiert, ist das nur für
+fortgeschrittene Webmaster zu empfehlen. 
+In der Datei proxy.sql findet man eine Auswahl von 12 Proxys aus meinem Proxy 
+Repository.
+
+Kontakt
+################################################################################
+Problemen während der Installation?
+Fragen zu dem Backlinkchecker?
+Sonsstige Anregungen zum Backlinkchecker!
+
+Das alles bitte per Mail an: M.Jentsch@web.de
+
