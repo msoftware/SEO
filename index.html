@@ -1,66 +1,17 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Seo : SEO Download Seite" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Seo</title>
-    
-     <script>
-     $( document ).ready(function() {
-       $.getJSON("http://www.google.de/uds/GwebSearch?context=0&lstkp=0&start=0&rsz=large&hl=de&gss=.de&sig=6520c5e1eff94d2f0b58de01c9739f48&key=notsupplied&v=1.0&q=seokanzler",
-       // $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-       {
-         format: "json"
-         }, function(data) {
-           console.dir(data);
-           });
-     });
-  
-  
-</script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Custom Search Element API Example</title>
+    <script src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('search', '1');
+        google.setOnLoadCallback(function(){
+          new google.search.CustomSearchControl().draw('cse');
+        }, true);
+    </script>
   </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/msoftware/SEO">View on GitHub</a>
-
-          <h1 id="project_title">Seo</h1>
-          <h2 id="project_tagline">SEO Download Seite</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/msoftware/SEO/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/msoftware/SEO/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p>Meine SEO Download Seite</p>
-      </section>
-
-  
-</div>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Seo maintained by <a href="https://github.com/msoftware">msoftware</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
+  <body style="font-family: Arial;border: 0 none;">
+    <div id="cse" style="width:100%;">Loading...</div>
   </body>
 </html>
