@@ -11,12 +11,17 @@
     <title>Seo</title>
     
      <script>
-$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-{
-  format: "json"
-}, function(data) {
-  console.dir(data);
-});</script>
+     $( document ).ready(function() {
+       $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+       {
+         format: "json"
+         }, function(data) {
+           console.dir(data);
+           });
+     });
+  
+  
+</script>
   </head>
 
   <body>
